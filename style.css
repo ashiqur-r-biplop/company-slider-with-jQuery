@@ -1,0 +1,17 @@
+.logo-container {
+  width: 100%;
+}
+
+.logo-container .slick-slide {
+  padding: 10px;
+  margin: 0 10px;
+  /* Adjust the margin value as per your preference */
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container .slick-slide img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}

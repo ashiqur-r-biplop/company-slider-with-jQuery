@@ -1,17 +1,57 @@
-.logo-container {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo-container .slick-slide {
-  padding: 10px;
-  margin: 0 10px;
-  /* Adjust the margin value as per your preference */
+.marquee-button {
+  position: relative;
+  max-width: 100% !important;
+  margin: auto;
+  height: 100px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
+  align-content: center;
+  border-radius: 10px;
 }
 
-.logo-container .slick-slide img {
-  max-width: 100%;
-  height: auto;
-  width: auto;
+.marquee-track-button {
+  position: absolute;
+  height: 100%;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 30s linear infinite; 
+}
+
+.marquee-track-button-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  fill: none;
+  gap: 40px;
+  stroke: transparent;
+  stroke-width: 87;
+}
+
+.marquee-track-button-content .marquee-image-box {
+  width: 250px;
+  height: 100%;
+}
+
+.marquee-track-button-content .marquee-image-box img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Add keyframes for the marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
